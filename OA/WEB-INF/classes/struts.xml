@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.objectFactory" value="spring" />
+	<package name="cc" namespace="/" extends="struts-default">
+<!-- 		用户修改信息的action -->
+		<action name="employeeAction" class="employeeAction" >
+			<result>/WEB-INF/pages/index.jsp</result>
+			<result name="error">/login.jsp</result>
+			<result name="input">/WEB-INF/pages/index.jsp</result>
+		</action>
+		
+		
+		<!-- 用户收发邮件的action -->
+		<action name="mailAction" class="mailAction" >
+			<result>/WEB-INF/pages/index.jsp</result>
+		</action>
+		
+		
+		
+		
+	</package>
+</struts>    
